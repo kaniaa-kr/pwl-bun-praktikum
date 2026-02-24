@@ -1,0 +1,7 @@
+logLevel = "debug"
+[test]
+root = "./tests"
+coverage = true
+
+[serve.static]
+env = "BUN_PUBLIC_*"
