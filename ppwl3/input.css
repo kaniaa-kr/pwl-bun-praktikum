@@ -1,3 +1,22 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-pwl-primary: #8b5cf6;
+  --color-pwl-hover: #c4b5fd;
+}
+
+@layer components {
+  .btn-tab-active {
+    @apply px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-300 border-pwl-primary text-pwl-primary;
+  }
+
+  .btn-tab-inactive {
+    @apply px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-300 border-transparent text-gray-500;
+
+    &:hover {
+      @apply text-pwl-primary border-pwl-hover;
+    }
+  }
+}
